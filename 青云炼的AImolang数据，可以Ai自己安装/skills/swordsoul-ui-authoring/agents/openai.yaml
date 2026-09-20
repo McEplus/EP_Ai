@@ -1,0 +1,4 @@
+interface:
+  display_name: "SwordSoul UI Authoring"
+  short_description: "Configuration-driven SWS and QingYun UI development"
+  default_prompt: "Use $swordsoul-ui-authoring to build or extend a configuration-driven SwordSoul UI."

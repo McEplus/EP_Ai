@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auto Fill Mob Moves"
+  short_description: "Derive aligned SWS mob move configs from animation evidence"
+  default_prompt: "Use $auto-fill-mob-move-config to derive an aligned SWS mob move configuration from the target animation and entity sources."

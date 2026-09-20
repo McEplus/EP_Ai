@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bedrock Animation Authoring"
+  short_description: "Review Bedrock animation resources."
+  default_prompt: "Use this skill to work on Minecraft Bedrock or NetEase geometry, animation JSON, animation controllers, client entity bindings, and Molang animation resources."

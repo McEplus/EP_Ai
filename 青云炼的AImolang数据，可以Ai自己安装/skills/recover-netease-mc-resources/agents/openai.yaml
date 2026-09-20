@@ -1,0 +1,4 @@
+interface:
+  display_name: "NetEase MC Resource Recovery"
+  short_description: "Recover owner-authorized NetEase Minecraft resource packs safely"
+  default_prompt: "Use $recover-netease-mc-resources to inspect and recover an owner-authorized NetEase Minecraft resource pack safely."

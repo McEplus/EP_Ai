@@ -1,0 +1,4 @@
+interface:
+  display_name: "Molang Animation Authoring"
+  short_description: "Author and review Bedrock/NetEase Molang animation expressions."
+  default_prompt: "Use this skill to write or review Molang expressions for Minecraft Bedrock or NetEase animation JSON and animation controllers."
