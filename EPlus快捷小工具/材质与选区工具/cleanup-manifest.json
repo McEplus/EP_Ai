@@ -1,0 +1,135 @@
+{
+    "destination":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具",
+    "moved":  [
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\audit_pbr_masks.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\audit_pbr_masks.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\build_mask_tool.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\build_mask_tool.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\check_pbr_mask_gl.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\check_pbr_mask_gl.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\pbr_mask_core.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\pbr_mask_core.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\rollout_detail_masks.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\rollout_detail_masks.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\verify_detail_rollout.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\verify_detail_rollout.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\verify_pbr_bindings.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\verify_pbr_bindings.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\tool_paths.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\tool_paths.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\pbr-mask-batch.html",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\pbr-mask-batch.html",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\mask-batch",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tools\\mask-batch",
+                      "files":  12
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\docs\\pbr-mask-audit",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\docs\\pbr-mask-audit",
+                      "files":  16
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tests\\test_basp_detail_mask.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tests\\test_basp_detail_mask.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tests\\test_pbr_mask_material.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tests\\test_pbr_mask_material.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tests\\test_mask_batch_browser.py",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tests\\test_mask_batch_browser.py",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\resource_pack_EP_JXK_0\\textures\\pbr\\eplus_pbr.png",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\assets\\environment\\eplus_pbr.png",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\.cache\\pbr-tool-deps",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\.cache\\pbr-tool-deps",
+                      "files":  314
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tool-settings.json",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\tool-settings.json",
+                      "files":  1
+                  },
+                  {
+                      "source":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\.codex_tmp\\material-toolkit-README.md",
+                      "target":  "C:\\Users\\pc\\Desktop\\VSC工作台\\Ai制作经验总结\\EPlus快捷小工具\\材质与选区工具\\README.md",
+                      "files":  1
+                  }
+              ],
+    "deleted_backups":  [
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\tools\\pbr-mask-sources",
+                                "count":  144,
+                                "bytes":  48832
+                            },
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\5f8c9b1478e241ac94031b1b02df08e3\\tools\\pbr-mask-sources",
+                                "count":  27,
+                                "bytes":  171863
+                            },
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\tools\\pbr-mask-sources",
+                                "count":  26,
+                                "bytes":  102584
+                            },
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\823d802adb2e42708a71ca4f863afe35\\tools\\pbr-mask-sources",
+                                "count":  94,
+                                "bytes":  57223
+                            },
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\22f5988bacfd44b4a5306ffeff1abba9\\tools\\pbr-mask-sources",
+                                "count":  45,
+                                "bytes":  258703
+                            },
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\59cc2f296e854a9d8fe027ff0bb9f9c4\\tools\\pbr-mask-sources",
+                                "count":  9,
+                                "bytes":  31252
+                            },
+                            {
+                                "root":  "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\ead4fc560a4e45c1bdd0d88ef9710061\\tools\\pbr-mask-sources",
+                                "count":  21,
+                                "bytes":  56227
+                            }
+                        ],
+    "deleted_cache":  [
+                          "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113\\.cache\\mask-tool"
+                      ]
+}

@@ -1,0 +1,29 @@
+{
+  "base": "textures/models/basp_tf",
+  "runtime_mask": "textures/pbr/detail/basp_tf_color_mask",
+  "size": [
+    174,
+    88
+  ],
+  "selected_pixels": 1222,
+  "detail_min": 0.3058823529411765,
+  "detail_median": 0.9019607843137255,
+  "detail_max": 0.9882352941176471,
+  "runtime_png_bytes": 3095,
+  "source_sha256": "e689e32bc0b957ea7b0c44058e9d6af58386eb6f56153bf9291239a6cdcafc7a",
+  "mask_sha256": "659adcf5e4ee2cbf44310960d984a7a313b0dac106e2e93ead9ce8cff35979d6",
+  "metrics": {
+    "white": {
+      "old_mean_absolute_target_error": 0.25047120866895584,
+      "new_mean_absolute_target_error": 0.1479991014409037
+    },
+    "gray141": {
+      "old_mean_absolute_target_error": 0.28003487265064236,
+      "new_mean_absolute_target_error": 0.0820673277494304
+    },
+    "red": {
+      "old_mean_absolute_target_error": 0.08412331653883594,
+      "new_mean_absolute_target_error": 0.04933303381363456
+    }
+  }
+}

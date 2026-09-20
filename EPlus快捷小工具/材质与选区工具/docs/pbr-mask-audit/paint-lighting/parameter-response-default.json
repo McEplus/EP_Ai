@@ -1,0 +1,66 @@
+{
+  "metal": [
+    {
+      "value": 1,
+      "raw_reflection": 0.0013071895424836555,
+      "paint_reflection": 0.0013071895424836555
+    },
+    {
+      "value": 25,
+      "raw_reflection": 0.03921568627450983,
+      "paint_reflection": 0.040522875816993376
+    },
+    {
+      "value": 50,
+      "raw_reflection": 0.14379084967320266,
+      "paint_reflection": 0.14248366013071895
+    },
+    {
+      "value": 75,
+      "raw_reflection": 0.2026143790849673,
+      "paint_reflection": 0.20261437908496716
+    },
+    {
+      "value": 90,
+      "raw_reflection": 0.22745098039215686,
+      "paint_reflection": 0.2287581699346405
+    },
+    {
+      "value": 100,
+      "raw_reflection": 0.23790849673202616,
+      "paint_reflection": 0.23660130718954253
+    }
+  ],
+  "rough": [
+    {
+      "value": 1,
+      "raw_reflection": 0.2549019607843137,
+      "paint_reflection": 0.25490196078431376
+    },
+    {
+      "value": 25,
+      "raw_reflection": 0.23790849673202616,
+      "paint_reflection": 0.23660130718954253
+    },
+    {
+      "value": 50,
+      "raw_reflection": 0.21176470588235294,
+      "paint_reflection": 0.2104575163398693
+    },
+    {
+      "value": 75,
+      "raw_reflection": 0.13725490196078424,
+      "paint_reflection": 0.13594771241830061
+    },
+    {
+      "value": 90,
+      "raw_reflection": 0.060130718954248374,
+      "paint_reflection": 0.06274509803921569
+    },
+    {
+      "value": 100,
+      "raw_reflection": 0.028758169934640504,
+      "paint_reflection": 0.02875816993464053
+    }
+  ]
+}

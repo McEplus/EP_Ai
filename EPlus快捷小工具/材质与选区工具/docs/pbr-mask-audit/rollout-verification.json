@@ -1,0 +1,51 @@
+{
+  "verified": 366,
+  "projects": {
+    "EP军工0": 144,
+    "EP军工1_战争地带": 27,
+    "EP军工2_硝烟四起": 26,
+    "EP军工3_EMX": 94,
+    "EP军工7_APX": 45,
+    "EP军工8_BO7黑色行动": 9,
+    "EP军工9_硝烟变革": 21
+  },
+  "errors": [],
+  "nonstandard_mask_references": [
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\resource_pack_EP_JXK_Gun_2\\modconfigs\\EP_JG_DATA\\an94.json",
+      "ep_item_color_mask",
+      "textures/models/an94"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\resource_pack_EP_JXK_Gun_2\\modconfigs\\EP_JG_DATA\\ash12.json",
+      "ep_item_color_mask",
+      "textures/models/ash12"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\resource_pack_EP_JXK_Gun_2\\modconfigs\\EP_JG_DATA\\desert.json",
+      "ep_item_color_mask",
+      "textures/models/desert"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\resource_pack_EP_JXK_Gun_2\\modconfigs\\EP_JG_DATA\\dvl10.json",
+      "ep_item_color_mask",
+      "textures/models/dvl10"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\resource_pack_EP_JXK_Gun_2\\modconfigs\\EP_JG_DATA\\mk47.json",
+      "ep_item_color_mask",
+      "textures/models/mk47"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0\\resource_pack_EP_JXK_Gun_2\\modconfigs\\EP_JG_DATA\\qbz191.json",
+      "ep_item_color_mask",
+      "textures/models/qbz191"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\ca565077d9b644d2a0aba55f43d17bb3\\resource_pack_EP_JXK_12\\modconfigs\\EP_JG_DATA\\ash12_time.json",
+      "ep_item_color_mask",
+      "textures/models/ash12_time"
+    ]
+  ],
+  "uncompiled_references": []
+}

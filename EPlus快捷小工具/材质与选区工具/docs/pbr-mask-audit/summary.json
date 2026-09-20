@@ -1,0 +1,36 @@
+{
+  "roots": [
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\0d09f0c5ce3c4778be216e9fda681ea0",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\22f5988bacfd44b4a5306ffeff1abba9",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\23afe62d3ccb4341a3e76fc5d375b32b",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\385935ca32f44c7a9a03c5e2621aea07",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\427b2079c61748eba216ebe469deb068",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\59cc2f296e854a9d8fe027ff0bb9f9c4",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\5f8c9b1478e241ac94031b1b02df08e3",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\823d802adb2e42708a71ca4f863afe35",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\831c3c42673f4962bd4ac51a598632e2",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\a9711eb71969401285b0d83360a959e9",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\b5842f339d384cadaafff783e1fb5879",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\c42ee8df6d354d1fb5b62b6b3c778ba2",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\ca565077d9b644d2a0aba55f43d17bb3",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\ead4fc560a4e45c1bdd0d88ef9710061",
+    "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\fea27878bd6a487890f0ccbfbd45f113"
+  ],
+  "textures": 374,
+  "references": 743,
+  "transparent_rgb_textures": 1,
+  "fully_metallic_textures": 16,
+  "missing_references": [
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\823d802adb2e42708a71ca4f863afe35\\resource_pack_EP_JXK_Gun_3\\modconfigs\\EP_BLIND_PARTS\\emx_parts.json",
+      "ep_muzzle_color_mask",
+      "textures/models/emx_parts/muzzle/emx_muzzle_am_color_mask"
+    ],
+    [
+      "D:\\MCStudioDownload\\work\\m15962993069@163.com\\Cpp\\AddOn\\ead4fc560a4e45c1bdd0d88ef9710061\\resource_pack_EP_JXK_9\\modconfigs\\EP_JG_DATA\\snowballgun.json",
+      "ep_item_color_mask",
+      "textures/models/snowballgun_color_mask"
+    ]
+  ],
+  "parse_errors": []
+}
