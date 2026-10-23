@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPlus · 模型快捷导入</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="converter.js"></script>
+  <script defer src="project.js"></script>
+  <script defer src="preview.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">E<span>+</span></span><span>EPlus <b>模型快捷导入</b></span></a>
+    <div class="top-actions"><span class="local"><i></i> 本地运行 · 文件不上传</span><button id="helpButton" class="quiet">使用说明 <span>↗</span></button><span class="version">v1.0</span></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div><div class="eyebrow">BLOCKBENCH → BEDROCK</div><h1>从 Blockbench，<span>直达项目。</span></h1><p>拖入模型，补全标识符，把资源放到它该在的位置。</p></div>
+      <div class="steps"><span><b>01</b> 选项目</span><i>／</i><span><b>02</b> 放入模型</span><i>／</i><span><b>03</b> 预览并导入</span></div>
+    </section>
+    <div id="compatibility" class="notice warning" hidden></div>
+    <div class="workspace">
+      <aside class="panel settings">
+        <div class="panel-title"><span class="step-number">01</span><h2>目标项目</h2><span id="projectBadge" class="badge">未连接</span></div>
+        <label for="projectPath">项目路径 <span class="optional">用于定位文件夹</span></label>
+        <textarea id="projectPath" rows="3" spellcheck="false" aria-describedby="pathHint"></textarea>
+        <div class="button-row"><button id="chooseProject" class="secondary grow">▣ 选择项目文件夹</button><button id="copyPath" class="icon-button" title="复制项目路径" aria-label="复制项目路径">⧉</button></div>
+        <p class="hint" id="pathHint">在选择窗口的地址栏粘贴路径，再确认文件夹。浏览器需要你手动授权一次。</p>
+        <div id="projectConnected" class="connected" hidden></div>
+        <label for="resourcePack">资源包</label><select id="resourcePack"><option value="resource_pack_EP_JXK_21">resource_pack_EP_JXK_21（选择项目后识别）</option></select>
+        <div class="divider"></div>
+        <div class="section-label">输出位置 <span>相对于项目文件夹</span></div>
+        <label for="modelDir"><span class="file-icon geo">G</span> 模型 <small>.geo.json</small></label>
+        <div class="path-row"><input id="modelDir" spellcheck="false"><button data-browse="modelDir" class="icon-button" title="选择模型输出文件夹" aria-label="选择模型输出文件夹">…</button></div>
+        <label for="animationDir"><span class="file-icon anim">A</span> 动画 <small>.animation.json</small></label>
+        <div class="path-row"><input id="animationDir" spellcheck="false"><button data-browse="animationDir" class="icon-button" title="选择动画输出文件夹" aria-label="选择动画输出文件夹">…</button></div>
+        <label for="textureDir"><span class="file-icon tex">T</span> 贴图 / 材质图像 <small>.png</small></label>
+        <div class="path-row"><input id="textureDir" spellcheck="false"><button data-browse="textureDir" class="icon-button" title="选择贴图输出文件夹" aria-label="选择贴图输出文件夹">…</button></div>
+        <p class="hint">目录不存在时自动创建。无动画的模型不会生成空动画文件。</p>
+        <div class="divider"></div>
+        <label class="check"><input type="checkbox" id="overwrite"><span>允许替换同名文件<small>替换前自动备份原文件</small></span></label>
+        <div class="settings-actions"><button id="saveConfig" class="text-button">导出路径配置</button><button id="loadConfig" class="text-button">载入配置</button></div>
+        <input type="file" id="configInput" accept=".json" hidden>
+      </aside>
+      <section class="content">
+        <section class="panel assets">
+          <div class="panel-title"><span class="step-number">02</span><h2>模型素材</h2><span id="queueCount" class="count">0 个模型</span><button id="clearQueue" class="text-button push" disabled>清空</button></div>
+          <button id="dropZone" class="drop-zone"><span class="drop-icon">↓</span><strong>把 .bbmodel 文件拖到这里</strong><span>或点击选择文件，支持批量添加</span><span class="drop-tags">BBMODEL <i>·</i> 内嵌 PNG <i>·</i> 骨骼动画</span></button>
+          <input id="fileInput" type="file" accept=".bbmodel" multiple hidden>
+          <div id="queue" class="queue"></div>
+          <div id="emptyState" class="empty-state"><span>◇</span><p>你的下一个模型，从这里出发。</p><small>模型只在本机解析，原始 bbmodel 保持不变。</small></div>
+        </section>
+        <section class="panel preview-panel">
+          <div class="panel-title"><span class="step-number">03</span><h2>导入预览</h2><span id="previewBadge" class="badge">等待素材</span><button id="togglePreview" class="text-button push">查看模型</button></div>
+          <div id="modelPreview" hidden><div class="canvas-wrap"><canvas id="previewCanvas" aria-label="模型预览，可拖动旋转、滚轮缩放"></canvas><span class="canvas-caption">拖动旋转 · 滚轮缩放 · 静态模型预览</span><button id="resetView" class="quiet">重置视角</button></div><div id="texturePreview" class="texture-preview"></div></div>
+          <div id="outputList" class="output-list"><div class="output-placeholder">添加模型后，这里会列出即将生成的文件。</div></div>
+          <div id="validation" class="validation" aria-live="polite"></div>
+          <div class="import-footer"><div><strong id="summary">准备好你的模型</strong><p id="summaryHint">补全标识符后，即可预览输出。</p></div><div class="button-row"><button id="downloadZip" class="secondary" disabled>导出 ZIP</button><button id="importButton" class="primary" disabled>预检并导入 <span>→</span></button></div></div>
+        </section>
+      </section>
+    </div>
+    <footer><span>EPlus 工具箱 <i>/</i> 专注每一次创作</span><span>Bedrock Geometry 1.12.0 · Animation 1.8.0</span></footer>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="confirmDialog"><div class="dialog-head"><span class="eyebrow">READY TO IMPORT</span><h2>确认本次导入</h2><p id="confirmSummary"></p></div><div id="confirmFiles" class="confirm-files"></div><p id="backupNotice" class="hint"></p><div class="dialog-actions"><button id="cancelImport" class="secondary">返回修改</button><button id="confirmImport" class="primary">写入项目</button></div></dialog>
+  <dialog id="helpDialog"><div class="dialog-head"><span class="eyebrow">QUICK START</span><h2>三步，完成资源导入。</h2></div><ol class="help-list"><li><strong>选择项目文件夹</strong><p>用 Edge 或 Chrome 打开本网页。复制项目路径，在文件夹选择窗口的地址栏粘贴，选择项目根目录。工具会自动识别其中的资源包。</p></li><li><strong>拖入 bbmodel，补全标识符</strong><p>支持批量导入。标识符示例：geometry.ep.lockpick。缺失时会阻止导入；可在卡片里补填，也可以回 Blockbench 的项目设置修改。</p></li><li><strong>确认目录，预览并导入</strong><p>三个目录分别接收模型 JSON、动画 JSON 和 PNG。点击“预检并导入”查看实际文件清单，再写入项目。也可以导出 ZIP 后手动解压到项目。</p></li></ol><div class="help-note">当前支持立方体模型、骨骼层级、单张内嵌 PNG、定位器，以及线性 / 阶梯 / Catmull-Rom 动画。网格、多贴图混用、旋转 UV、Bezier 动画等暂不支持的内容会明确拦截。bbmodel 中的材质图像导出为 PNG，不生成引擎着色器 .material 文件，也不自动创建实体、物品或动画绑定。</div><div class="dialog-actions"><button id="closeHelp" class="primary">开始使用</button></div></dialog>
+</body>
+</html>

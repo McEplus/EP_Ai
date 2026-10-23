@@ -1,0 +1,62 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>EPlus browser integration checks</title>
+<style>html,body{margin:0;height:100%;background:#101316}iframe{border:0;width:100%;height:100%;display:block}#result{position:fixed;bottom:5px;right:10px;background:#173529;color:#c9f2dc;font:12px monospace;padding:8px 12px;border-radius:5px;z-index:10}</style>
+<iframe id="app" src="../index.html"></iframe><output id="result">RUNNING</output>
+<script src="memory-fs.js"></script><script>
+(async()=>{
+  const checks=[],errors=[];
+  const assert=(ok,name)=>{if(!ok)throw Error(name);checks.push(name);};
+  async function until(fn){for(let i=0;i<250;i++){if(fn())return;await new Promise(r=>setTimeout(r,20));}throw Error('Timed out: '+fn);}
+  const frame=document.getElementById('app');
+  await new Promise(r=>frame.addEventListener('load',r,{once:true}));
+  const win=frame.contentWindow,doc=win.document,$=id=>doc.getElementById(id);
+  win.addEventListener('error',e=>errors.push(e.message));
+  win.addEventListener('unhandledrejection',e=>errors.push(String(e.reason)));
+  try{
+    assert($('importButton').disabled,'empty queue blocks import');
+    const root=new MemoryDirectory('验收测试项目');
+    await root.put('resource_pack_EP_JXK_21/manifest.json',JSON.stringify({modules:[{type:'resources'}]}));
+    win.showDirectoryPicker=async()=>root;
+    $('chooseProject').click();await until(()=>$('projectBadge').textContent==='已连接');
+    assert($('resourcePack').value==='resource_pack_EP_JXK_21','resource pack discovery');
+    const dt=new win.DataTransfer();
+    for(const filename of ['开锁枪.bbmodel','撬锁工具.bbmodel']){const response=await fetch('../模型素材/'+encodeURIComponent(filename));dt.items.add(new win.File([await response.text()],filename,{type:'application/json'}));}
+    $('fileInput').files=dt.files;$('fileInput').dispatchEvent(new win.Event('change',{bubbles:true}));
+    await until(()=>doc.querySelectorAll('[data-id]').length===2&&!doc.querySelector('main').inert);
+    assert($('importButton').disabled,'missing identifiers block import');
+    assert($('queue').textContent.includes('缺少模型标识符'),'missing identifier warning visible');
+    const inputs=doc.querySelectorAll('[data-id]');
+    inputs[0].value='geometry.ep.lockpick_gun';inputs[1].value='geometry.ep.lockpick_tools';
+    for(const input of inputs)input.dispatchEvent(new win.Event('input',{bubbles:true}));
+    assert(!$('importButton').disabled,'filled identifiers enable import');
+    assert(doc.querySelectorAll('#outputList .output-row').length===4,'four expected outputs');
+    inputs[1].value=inputs[0].value;inputs[1].dispatchEvent(new win.Event('input',{bubbles:true}));
+    assert($('importButton').disabled&&$('validation').textContent.includes('重复'),'duplicate IDs block import');
+    inputs[1].value='geometry.ep.lockpick_tools';inputs[1].dispatchEvent(new win.Event('input',{bubbles:true}));
+    $('modelDir').value='../escape';$('modelDir').dispatchEvent(new win.Event('input',{bubbles:true}));
+    assert($('downloadZip').disabled,'unsafe path blocks export');
+    $('modelDir').value='resource_pack_EP_JXK_21/models/entity';$('modelDir').dispatchEvent(new win.Event('input',{bubbles:true}));
+    $('togglePreview').click();await until(()=>$('previewCanvas').width>0&&$('texturePreview').querySelector('img'));
+    await new Promise(r=>setTimeout(r,150));
+    const canvas=$('previewCanvas'),pixels=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;
+    assert(pixels.some((v,i)=>i%4===3&&v===255),'model preview renders opaque texture pixels');
+    $('importButton').click();await until(()=>$('confirmDialog').open);
+    assert($('confirmFiles').querySelectorAll('.output-row').length===4,'confirmation lists all destinations');
+    $('confirmImport').click();await until(()=>$('validation').textContent.includes('导入完成'));
+    assert((await root.paths()).filter(p=>/\.(geo.json|png)$/.test(p)).length===4,'all resources written through app flow');
+    const geo=JSON.parse(new TextDecoder().decode(await root.read('resource_pack_EP_JXK_21/models/entity/ep.lockpick_gun.geo.json')));
+    assert(geo['minecraft:geometry'][0].bones.reduce((n,b)=>n+(b.cubes||[]).length,0)===62,'written geometry contains all 62 cubes');
+    $('importButton').click();await until(()=>$('validation').textContent.includes('同名文件'));
+    assert(!$('confirmDialog').open,'existing files blocked by default');
+    $('overwrite').checked=true;$('overwrite').dispatchEvent(new win.Event('change'));
+    $('importButton').click();await until(()=>$('confirmDialog').open);
+    $('confirmImport').click();await until(()=>$('validation').textContent.includes('原文件备份'));
+    assert((await root.paths()).some(p=>p.startsWith('.bb-import-backups/')),'overwrite backup generated');
+    if(!location.search.includes('preview')){$('togglePreview').click();}
+    assert(errors.length===0,'no JavaScript errors or promise rejections');
+    document.getElementById('result').textContent='PASS '+checks.length+' browser checks';
+    document.title='PASS '+checks.length+' browser checks';
+    const report={passed:checks.length,checks,errors};
+    const node=document.createElement('script');node.id='test-report';node.type='application/json';node.textContent=JSON.stringify(report);document.body.append(node);
+  }catch(error){document.getElementById('result').textContent='FAIL '+error.message;document.title='FAIL';document.body.setAttribute('data-failure',error.stack);}
+})();
+</script></html>
